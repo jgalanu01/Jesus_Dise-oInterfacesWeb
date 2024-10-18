@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4</title>
+  <link rel="stylesheet" href="../../../Utils/css/general.css">
+
+  <style>
+
+   
+
+    .f-left{
+        float: left;
+        padding:30 px;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+
+    /* Se muestra horizontal para pantallas mayores de 600px */
+    @media (max-width: 600px){
+        
+
+            .f-left{
+            float:none;
+            }
+        }
+        
+        
+    
+        /* Se muestra vertical para pantallas menores de 600px */
+    @media (min-width: 600px){
+
+        .f-left{
+            float:left;
+            
+        }
+        
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="clearfix">
+    <div class="f-left">Link</div>
+    <div class="f-left">Link</div>
+    <div class="f-left">Link</div>
+
+</body>
+
+</html>
