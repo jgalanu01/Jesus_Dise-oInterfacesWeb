@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+header {
+  background-color: lightgray;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+header img {
+  width: 50px;
+  margin-right: 0.3125rem;
+}
+
+.f-izq {
+  float: left;
+}
+
+.f-der {
+  float: right;
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto; /*Para que se centre horizontalmente*/
+}
+
+.contenedor-lista {
+  background-color: lightgreen;
+}
+
+.contenedor-cuadro {
+  background-color: lightcoral;
+  padding: 200px;
+}
+
+li {
+  padding: 0.625rem;
+}
+
+.cabecera {
+  background-color: black;
+  color: white;
+  border-radius: 60%;
+  text-align: center;
+  padding: 8px;
+}
+
+table {
+  border: 7px dashed blue;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth; /* Activar desplazamiento suave */
+}
+
+footer {
+  background-color: lightgray;
+  padding: 0.625rem;
+  margin-top: 10px;
+}
+
+/* Los ítems impares serán azules */
+li:nth-child(odd) {
+  color: blue;
+}
+
+/* Los ítems pares serán rojos */
+li:nth-child(even) {
+  color: red;
+}
+
+.ir-arriba:hover{
+    background-color: yellow;
+}
+
+@media only screen and (min-width: 900px) {
+    .titulo{
+        position: relative;
+        left: -30px;
+    }
+}

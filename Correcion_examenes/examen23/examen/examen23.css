@@ -1,0 +1,92 @@
+/* Configuración de box-sizing y fuente base */
+* {
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total de los elementos */
+    font-family: Arial, Helvetica, sans-serif; /* Establece la fuente base */
+}
+
+/* Clase para el clearfix */
+.clearfix::after {
+    content: "";
+    clear: both; /* Asegura que los elementos flotantes no interfieran con el flujo del documento */
+    display: table; /* Cambia el contenedor a un contexto de tabla para que clearfix funcione */
+}
+
+/* Clases de flotación para la cabecera */
+.f-izq {
+    float: left; /* Alinea el logo a la izquierda */
+}
+
+.f-der {
+    float: right; /* Alinea el enlace "Comprar ahora" a la derecha */
+}
+
+header {
+    padding: 20px; /* Espaciado interno del header */
+}
+
+header a {
+    padding: 10px; /* Espaciado interno del enlace */
+    border: 2px solid black; /* Borde negro alrededor del enlace */
+    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+    border-radius: 8%; /* Bordes redondeados del enlace */
+    color: black; /* Color del texto del enlace */
+    margin-right: 30px; /* Espacio a la derecha del enlace */
+}
+
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 900px) {
+    .contenedor-img .position {
+        position: absolute; /* Posiciona el texto de forma relativa a su contenedor */
+        top: 20px; /* Posición desde la parte superior */
+        left: calc(2% + 2rem); /* Calcula la posición desde la izquierda, adaptable */
+        width: 35%; /* Anchura del texto dentro del contenedor de la imagen */
+        margin: 0;
+    }
+}
+
+.position {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Estilos específicos para el header y el logo */
+header img {
+    margin-left: 30px; /* Espacio a la izquierda del logo */
+}
+
+.contenedor-img {
+    position: relative; /* Permite que los elementos hijos se posicionen de forma absoluta */
+}
+
+header a:hover {
+    background-color: black; /* Cambia el fondo del enlace a negro al pasar el ratón */
+    color: white; /* Cambia el color del texto a blanco en hover */
+}
+
+/* Estilos para los artículos (tarjetas) */
+article {
+    border-radius: 20px; /* Bordes redondeados de cada tarjeta */
+    padding: 20px; /* Espaciado interno de las tarjetas */
+}
+
+/* Colores de fondo específicos para cada tarjeta */
+.azul {
+    background-color: lightblue; /* Fondo azul claro */
+}
+
+.rojo {
+    background-color: lightcoral; /* Fondo rojo claro */
+}
+
+.clarito {
+    background-color: aquamarine; /* Fondo verde claro */
+}
+
+.amarillo {
+    background-color: lightgoldenrodyellow; /* Fondo amarillo claro */
+}
+
+/* Imagen de portada responsiva */
+.contenedor-img img {
+    max-width: 100%; /* Escala la imagen al 100% del ancho del contenedor */
+}
