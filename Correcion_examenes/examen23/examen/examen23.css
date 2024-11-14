@@ -33,7 +33,7 @@ header a {
     border-radius: 8%; /* Bordes redondeados del enlace */
     color: black; /* Color del texto del enlace */
     margin-right: 30px; /* Espacio a la derecha del enlace */
-
+    
 }
 
 /* Estilos para pantallas grandes */
@@ -94,7 +94,8 @@ article {
 /* Imagen de portada responsiva */
 .contenedor-img img {
     max-width: 100%; /* Escala la imagen al 100% del ancho del contenedor */
-    aspect-ratio: 16/9; /* Proporción de aspecto de la imagen */
-    object-fit: cover; /* Ajusta la imagen a cubrir el contenedor */
+    
 
 }
+
+
