@@ -12,16 +12,18 @@
 </head>
 
 <body>
-    <div id="container">Hola jQuery</div>
+    <input type="text" id="textbox">
 
     <script>
         $(document).ready(function () {
-
-        });
-
-
+            $("#textbox").on("keydown", function () {
+                console.log("keydown event");
+            });
+            $("#textbox").on("keyup", function () {
+                console.log("keyup event");
+            });
+        }); 
     </script>
-
 </body>
 
 </html>
