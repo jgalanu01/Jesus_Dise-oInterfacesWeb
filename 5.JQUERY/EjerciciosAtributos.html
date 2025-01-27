@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Atributos</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<style>
+    .highlight {
+        background-color: yellow;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<h1 id="main-title">Título principal</h1>
+<p id="description" class="hidden">Este es un párrafo con una clase
+    oculta.</p>
+<button id="toggle-class">Cambiar clase</button>
+<input id="input-field" type="text" value="Texto inicial">
+<a id="link" href="https://example.com">Ir a Example</a>
+<button id="submit-button" disabled>Enviar</button>
+
+
+<script>
+    $(document).ready(function () {
+        //Usa addClass() para añadir la clase highlight al elemento #main-title. 
+        $("#main-title").addClass("highlight");
+
+        // Usa attr() para cambiar el atributo href del enlace #link. 
+        $("#link").attr("href", "https://www.biwenger.com");
+
+
+    });
+</script>
