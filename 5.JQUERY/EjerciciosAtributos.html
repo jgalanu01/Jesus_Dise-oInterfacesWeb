@@ -30,7 +30,7 @@
     oculta.</p>
 <button id="toggle-class">Cambiar clase</button>
 <input id="input-field" type="text" value="Texto inicial">
-<a id="link" href="https://example.com">Ir a Example</a>
+<a id="link" href="https://example.com">Visita el enlace</a>
 <button id="submit-button" disabled>Enviar</button>
 
 
@@ -41,6 +41,36 @@
 
         // Usa attr() para cambiar el atributo href del enlace #link. 
         $("#link").attr("href", "https://www.biwenger.com");
+
+        //Usa hasClass() para comprobar si el párrafo #description tiene la clase hidden.Muestra el resultado en la consola
+        if ($("#description").hasClass("hidden")) {
+            console.log("El párrafo tiene la clase hidden");
+        }
+
+        //Usa html() para cambiar el contenido del título con ID main-title a Título actualizado con jQuery.
+        $("#main-title").html("Título actualizado con jQuery");
+
+        //Usa prop() para habilitar el botón con ID submit-button.
+        $("#submit-button").prop("disabled", false);
+
+        //Usa removeAttr() para eliminar el atributo href del enlace con ID link. 
+        $("#link").removeAttr("href");
+
+        //Usa removeClass() para quitar la clase hidden del párrafo #description. 
+        $("#description").removeClass("hidden");
+
+        //Usa toggleClass() para alternar la clase highlight en el botón #toggle-class cada vez que se haga clic en él.ç
+        $("#toggle-class").on("click", function () {
+            $(this).toggleClass("highlight");
+        });
+
+        //Usa val() para cambiar el valor del campo de entrada con ID #input-field. 
+        $("#input-field").val("Nuevo texto");
+
+
+
+
+
 
 
     });
