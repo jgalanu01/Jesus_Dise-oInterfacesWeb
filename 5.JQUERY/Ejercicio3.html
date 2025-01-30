@@ -12,6 +12,13 @@
 
 <body>
     <img src="https://via.placeholder.com/150" alt="Imagen 1">
+    <img src="https://via.placeholder.com/150" alt="">
+    <img src="https://via.placeholder.com/150" alt="Imagen 3">
+    <img src="https://via.placeholder.com/150" alt="Imagen 4">
+    <img src="https://via.placeholder.com/150" alt="Imagen 5">
+    <img src="https://via.placeholder.com/150" alt="Imagen 6">
+    <img src="https://via.placeholder.com/150" alt="Imagen 7">
+
 
 
 
@@ -21,6 +28,11 @@
     <script>
 
         $(document).ready(function () {
+            $("img").each(function () {
+                if ($(this).attr("alt") || $(this).attr("alt").trim() === "") {
+                    $(this).addClass("sinalt");
+                }
+            });
 
 
 
