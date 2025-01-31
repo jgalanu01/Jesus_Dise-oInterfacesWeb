@@ -1,0 +1,46 @@
+<!-- 9. Crea un código jQuery en el que se muestre por consola la diferencia 
+entre  los  métodos  outerWidth(),  innerWidth() , width() a  partir  del  HTML/CSS 
+siguiente:-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <style>
+        #ejemplo {
+            width: 200px;
+            padding: 20px;
+            border: 10px solid black;
+            margin: 20px;
+        }
+    </style>
+
+    <div id="ejemplo"></div>
+
+
+    <script>
+
+        $(document).ready(function () {
+            var outerWidth = $("#ejemplo").outerWidth();
+            var innerWidth = $("#ejemplo").innerWidth();
+            var width = $("#ejemplo").width();
+            console.log("outerWidth: " + outerWidth);
+            console.log("innerWidth: " + innerWidth);
+            console.log("width: " + width);
+        });
+    </script>
+
+
+
+</body>
+
+</html>
