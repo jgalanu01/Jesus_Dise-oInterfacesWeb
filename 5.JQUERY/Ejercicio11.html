@@ -23,6 +23,10 @@
     <script>
 
         $(document).ready(function () {
+            $('#brands').change(function () {
+                var selected = $('#brands option:selected').text();
+                $('#resultado').html('Has seleccionado: ' + selected);
+            });
 
 
 

@@ -1,0 +1,33 @@
+<!-- 13. Una llamada Ajax a nuestro servidor nos devuelve una lista de coches y modelos en formato JSON en texto plano. Crea el código jQuery para insertar dinámicamente en el div#respuesta una lista ordenada de los coches que recibimos.-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Ejercicio12</title>
+</head>
+
+<body>
+
+    <input type="button" value="Actualizar" id="refresh">
+    <div id="respuesta"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#refresh").click(function () {
+                $.ajax({
+                    url: "jquery-ej-13-coches.json",
+                    type: "GET",
+                    success: function (data) {
+
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
