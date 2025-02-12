@@ -1,0 +1,129 @@
+main {
+  padding: 2rem;
+}
+
+
+
+/* Panel de bienvenida */
+.welcome {
+  background-color: var(--color-light);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  color: var(--color-dark);
+}
+
+.welcome h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+
+/**  
+  * !!Se pone un gap en las ofertas para que haya una separación en cada una de ellas
+  */
+
+/* Panel Ofertas Especiales */
+.ofertas-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/**
+  
+  * !! " grid-auto-flow: row;" para que los elementos se vayan situando automáticamente fila por fila.
+  * !! "grid-column: 1 / -1;" en el último elemento hace que ocupe todas las columnas disponibles
+  * !! Definimos dos columnas con "grid-template-columns: repeat(2, 1fr);" y el ultimo hijo se posiciona en el centro de su contenedor
+  *
+
+  */
+
+@media only screen and (min-width: 600px) {
+  .ofertas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    gap: 20px;
+  }
+  
+  .ofertas-grid div:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+  
+}
+
+/**
+  
+  * !! Se le asigna un ancho fijo al "aside" y se le asigna el restante al main con "grid template-columns".
+  * !! Se indican 3 filas y se ajustan al contenido con "grid-template-rows".
+  * !! El header ocupa la primera fila y abarca las dos columnas completas.
+  * !! El main ocupa la segunda fila y la primera columna.
+  * !! El aside se posiciona en la segunda columna y en la segunda fila manteniendo el ancho en 250 px.
+  * !! Se crean 3 columnas para las tarjetas de las ofertas y se sube al último hijo 
+  * !! El último hijo se posiciona al lado de las demás, en la tercera columna(la última)
+
+  */
+
+
+@media only screen and (min-width: 1000px) {
+ .grid-index-container{
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  grid-template-columns: 1fr 250px;
+ }
+ header{
+  grid-column: 1/3;
+  grid-row: 1;
+ }
+ main{
+  grid-column: 1;
+  grid-row: 2;
+ }
+ aside{
+  grid-column: 2;
+  grid-row: 2;
+ }
+ .ofertas-grid {
+  grid-template-columns:repeat(3,auto);
+  grid-template-rows: auto;
+}
+.ofertas-grid div:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+ footer{
+  grid-column: 1/3 ;
+  grid-row: 3;
+ }
+ 
+}
+
+.ofertas h2 {
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--color-light);
+  padding: 2rem;
+  color: var(--color-dark);
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 0.5rem;
+}
+
+section.ofertas {
+  margin-top: 2rem;
+}
