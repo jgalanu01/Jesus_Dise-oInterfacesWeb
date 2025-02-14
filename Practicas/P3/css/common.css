@@ -104,6 +104,7 @@ footer {
   color: var(--color-white);
   padding: 2rem;
 }
+
 /**  
   * !! En pantallas pequeñas <600px (mobile first) se mantiene una estructura en la que se usa "row-gap" para separar elementos. 
   * !! En pantallas mayores >600px, se crean 3 columnas iguales con "auto", para que se distribuyan bien los elementos .
@@ -113,9 +114,10 @@ footer {
   display: grid;
   row-gap: 25px;
 }
+
 @media only screen and (min-width: 600px) {
   .footer-grid {
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3, auto);
     justify-content: space-around;
   }
 }
@@ -183,6 +185,7 @@ img {
 
 .config-button,
 .oferta-button {
+
   display: inline-block;
   background-color: var(--color-medium);
   color: var(--color-white);

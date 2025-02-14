@@ -8,6 +8,11 @@
   margin-bottom: 1rem;
 }
 
+
+/**
+  * !! Se usa "display: grid" en la sección de filtrar modelos para hacerlo cuadricula y estirar el botón 
+  * !! "row-gap: 15px" añade separación entre las filas, y evita que se amontonen los elementoa.
+  */
 .filter-sidebar form {
   display: grid;
   row-gap: 15px;
@@ -41,71 +46,102 @@
   background-color: var(--color-medium);
 }
 
+/**
+  * !! Se hace cuadricula la sección donde están los coches y los mismos models y se estira el botón de configurar, se da espacios.
+  */
 .models-grid {
   display: grid;
   row-gap: 20px;
   padding: 2rem;
 }
 
-.model-card{
-  row-gap: 10px;
+.model-card {
   display: grid;
+  row-gap: 10px;
+
 }
 
+
+/**
+  * !! Se ajusta la disposición del formulario y la cuadrícula de filtrar modelos para pantallas mayores a 600px.
+  * !! "filter-sidebar form" usa "grid-template-columns: auto 1fr" para distribuir los elementos del filtro en dos columnas.
+  * !! El botón de aplicar filtros ocupa ambas columnas con "grid-column: 1/3" para alinearse correctamente con el formulario
+  * !! y se centra el botón en el medio.
+  * !!  Cada tarjeta tiene un ancho mínimo de 250px y puede expandirse hasta ocupar el espacio disponible.
+  * !! "auto-fit" asegura que las tarjetas se distribuyan en filas y ocupen el ancho disponible sin dejar huecos.
+  * !!  Si el contenedor tiene más espacio, las tarjetas se expanden, pero si hay menos espacio, se ajustan.
+  */
 
 @media only screen and (min-width: 600px) {
-.filter-sidebar form {
-  grid-template-columns: auto 1fr;
-  column-gap: 10px;
-}
+  .filter-sidebar form {
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+  }
+
   .filter-sidebar button {
     grid-column: 1/3;
     justify-self: center;
   }
-  
-.models-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-}
-@media only screen and (min-width: 1000px) {
- .grid-models-container{
-    display: grid;
-    grid-template-rows: repeat(3,auto);
-    grid-template-columns: 300px 1fr;
-   }
-   .models-grid {
+
+  .models-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
   }
-   .filter-sidebar form {
-    grid-template-columns: auto;
-    column-gap: 10px;
+}
+
+/**
+  *!! "grid-template-columns: 300px 1fr" divide la pantalla en dos columnas:
+  *!! La primera (300px) es fija para la columna de filtros.
+  *!! La segunda ("1fr") ocupa el espacio restante para el contenido principal.
+  *!! Se definen 3 filas, la primera para el header la segunda para el contenido principal y la tercera para el footer.
+  *!! Se vuelve a usar auto fit para que las tarjetas se ajusten al tamaño de la pantalla, según el espacio disponible. y una separación entre ellas de 30px.
+  *!! Los elementos se mantienen en una sola columna definiendo solo una e el filtro de modelos con auto
+  *!! y se da un espaciado entre los elementos del filtro de modelos, y el botón ocupa solo  su columna  con span 1
+  *!! Después expandimos el botón gracias a la propiedad stretch de justify-self.
+  */
+
+@media only screen and (min-width: 1000px) {
+  .grid-models-container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 300px 1fr;
   }
+
+  .models-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .filter-sidebar form {
+    grid-template-columns: auto;
+    row-gap: 15px;
+  }
+
   .filter-sidebar button {
-    grid-column: 1;
+    grid-column:span 1;
     justify-self: stretch;
   }
-   header{
-    grid-column: 1/3;
-    grid-row: 1;
-   }
-   main{
-    grid-column: 2;
-    grid-row: 2;
-   }
-   aside{
-    grid-column: 1;
-    grid-row: 2;
-   }
-   footer{
-    grid-column: 1/3 ;
-    grid-row: 3;
-   }
-   .ofertas-grid {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
+
+
+  /**
+*!!Se ajusta header y footer
+*!!La cabecera ocupará dos columnas y la primera fila. Arriba del todo
+*!!El footer ocupará las dos columnas y la tercera fila, abajo del todo 
+
+
+*/
+  header {
+    grid-column: span 2;
+    grid-row-start: 1;
   }
+
+
+  footer {
+    grid-column: span 2;
+    grid-row-start: 3;
+  }
+
+
 }
 
 .config-button {
