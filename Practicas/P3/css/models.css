@@ -96,7 +96,7 @@
   *!! Se definen 3 filas, la primera para el header la segunda para el contenido principal y la tercera para el footer.
   *!! Se vuelve a usar auto fit para que las tarjetas se ajusten al tamaño de la pantalla, según el espacio disponible. y una separación entre ellas de 30px.
   *!! Los elementos se mantienen en una sola columna definiendo solo una e el filtro de modelos con auto
-  *!! y se da un espaciado entre los elementos del filtro de modelos, y el botón ocupa solo  su columna  con span 1
+  *!! y se da un espaciado entre los elementos del filtro de modelos, y el botón ocupa solo su columna con span 1
   *!! Después expandimos el botón gracias a la propiedad stretch de justify-self.
   */
 
