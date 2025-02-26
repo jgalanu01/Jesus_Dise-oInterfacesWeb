@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Bootstrap 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Barra de Navegación (igual que en index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-house-door-fill"></i> Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="recursosDropdown" role="button"
+                            data-bs-toggle="dropdown">Recursos</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Documentación</a></li>
+                            <li><a class="dropdown-item" href="#">Tutoriales</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Soporte</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulario de Registro -->
+    <main class="container my-5">
+        <h1 class="text-center mb-4">Formulario de Registro</h1>
+        <form>
+            <!-- Nombre -->
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+            </div>
+            <!-- Apellidos -->
+            <div class="mb-3">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" placeholder="Ingrese sus apellidos" required>
+            </div>
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su email" required>
+            </div>
+            <!-- Tipo de Usuario -->
+            <div class="mb-3">
+                <label for="tipoUsuario" class="form-label">Tipo de Usuario</label>
+                <select class="form-select" id="tipoUsuario" required>
+                    <option value="">Seleccione...</option>
+                    <option value="individual">Individual</option>
+                    <option value="empresa">Empresa</option>
+                    <option value="corporativo">Corporativo</option>
+                </select>
+            </div>
+            <!-- Comunidad Autónoma -->
+            <div class="mb-3">
+                <label for="comunidad" class="form-label">Comunidad Autónoma</label>
+                <input class="form-control" list="comunidades" id="comunidad" placeholder="Seleccione su comunidad">
+                <datalist id="comunidades">
+                    <option value="Andalucía">
+                    <option value="Cataluña">
+                    <option value="Madrid">
+                    <option value="Valencia">
+                    <option value="Galicia">
+                </datalist>
+            </div>
+            <!-- Código de Referido -->
+            <div class="mb-3">
+                <label for="codigoReferido" class="form-label">Código de Referido</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="codigoReferido" placeholder="Ingrese el código">
+                    <button class="btn btn-outline-secondary" type="button">Aplicar</button>
+                </div>
+            </div>
+            <!-- Intereses -->
+            <div class="mb-3">
+                <label class="form-label">Intereses</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="tecnologia">
+                    <label class="form-check-label" for="tecnologia">Tecnología</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="negocios">
+                    <label class="form-check-label" for="negocios">Negocios</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="diseno">
+                    <label class="form-check-label" for="diseno">Diseño</label>
+                </div>
+            </div>
+            <!-- Plan de Suscripción -->
+            <div class="mb-3">
+                <label class="form-label">Plan de Suscripción</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="plan" id="planBasico" value="basico" required>
+                    <label class="form-check-label" for="planBasico">Plan Básico</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="
