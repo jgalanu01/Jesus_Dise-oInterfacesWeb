@@ -15,7 +15,7 @@
 
 .ej1 :nth-child(3) {
     flex-shrink: 0;
-    overflow: hidden;
+    overflow:hidden
 
 }
 
