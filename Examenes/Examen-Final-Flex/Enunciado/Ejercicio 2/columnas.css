@@ -10,8 +10,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
- 
-  
+  justify-content: center;
 }
 
 .row>* {
@@ -25,7 +24,6 @@
 
 /* TABLETS: 600-900px */
 @media only screen and (min-width: 600px) {
-
   .col-t-1 {
     width: 8.33%;
   }
